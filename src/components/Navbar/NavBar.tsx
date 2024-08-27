@@ -8,7 +8,7 @@ import {
   Typography,
   IconButton,
 } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
+import { Search as SearchIcon, Menu as MenuIcon } from '@mui/icons-material';
 
 import { navLinksBottom, navLinksTop } from '../../mocks/NavLinks';
 import { TabsBar } from './TabsBar';
@@ -46,17 +46,27 @@ export const NavBar: React.FC = () => {
         >
           Blog
         </Typography>
-        <IconButton
-          onClick={() => setIsDrawerOpen(true)}
-          sx={{ display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'none' } }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Box
-          sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' } }}
-        >
-          <ThemeToggleButton />
-          <Button variant='outlined'>SIGN UP</Button>
+
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <Box
+            sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' } }}
+          >
+            <IconButton>
+              <SearchIcon />
+            </IconButton>
+            <Button variant='outlined'>SIGN UP</Button>
+          </Box>
+          <Box sx={{ display: 'flex', gap: 1, ml: 2 }}>
+            <IconButton
+              onClick={() => setIsDrawerOpen(true)}
+              sx={{
+                display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'none' },
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <ThemeToggleButton />
+          </Box>
         </Box>
       </Toolbar>
       <Divider />

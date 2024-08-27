@@ -8,11 +8,12 @@ import {
   Typography,
   IconButton,
 } from '@mui/material';
-import { Search as SearchIcon, Menu as MenuIcon } from '@mui/icons-material';
+import { Menu as MenuIcon } from '@mui/icons-material';
 
 import { navLinksBottom, navLinksTop } from '../../mocks/NavLinks';
 import { TabsBar } from './TabsBar';
 import { DrawerNav } from './DrawerNav';
+import { ThemeToggleButton } from './ThemeToggleButton';
 
 export const NavBar: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
@@ -54,9 +55,7 @@ export const NavBar: React.FC = () => {
         <Box
           sx={{ display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' } }}
         >
-          <IconButton>
-            <SearchIcon />
-          </IconButton>
+          <ThemeToggleButton />
           <Button variant='outlined'>SIGN UP</Button>
         </Box>
       </Toolbar>

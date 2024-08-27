@@ -73,7 +73,7 @@ export const FeaturedCard: React.FC<Props> = ({
           alt={title}
           sx={{
             width: { xs: '100%', sm: '150px' },
-            height: '100%',
+            height: { xs: '200px', md: '100%' },
             objectFit: 'cover',
           }}
         />

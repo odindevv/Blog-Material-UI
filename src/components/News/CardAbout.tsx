@@ -5,7 +5,7 @@ interface Props {
 
 export const CardAbout: React.FC<Props> = ({ description }) => {
   return (
-    <Card sx={{ bgcolor: '#e4e4e4' }}>
+    <Card sx={{ bgcolor: 'primary', boxShadow: 3 }}>
       <CardContent>
         <Typography
           variant='h6'
